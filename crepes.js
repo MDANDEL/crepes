@@ -11,6 +11,12 @@ button.addEventListener("click", function (e) {
     if (nbInvites <= 0) {
         alert("Merci de renseigner un bon nombre d'invités")
     } else {
+        let quantityflour = document.getElementById("qtyflour");
+        let quantityeggs = document.getElementById("qtyeggs");
+        let quantitymilk = document.getElementById("qtymilk");
+        let quantitysugar = document.getElementById("qtysugar");
+        let quantitybutter = document.getElementById("qtybutter");
+
         let newValue = parseInt(nbInvites.value);
         nbInvites.value = newValue;
         farine = farine * nbInvites;
@@ -18,6 +24,12 @@ button.addEventListener("click", function (e) {
         lait = lait * nbInvites;
         sucre = sucre * nbInvites;
         beurre = beurre * nbInvites;
+
+        quantityflour.innerText = farine;
+        quantityeggs.innerText = oeuf;
+        quantitymilk.innerText = lait;
+        quantitysugar.innerText = sucre;
+        quantitybutter.innerText = beurre;
 
         console.log(
             "Vous avez choisi de faire des crepes pour " + nbInvites + " personnes"
