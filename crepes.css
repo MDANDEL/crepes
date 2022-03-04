@@ -8,6 +8,8 @@ body {
     grid-auto-columns: 1fr;
     grid-auto-rows: 1fr;
     gap: 0px 0px;
+    border: 2px solid black;
+    border-radius: 3%;
     grid-auto-flow: row;
     justify-content: stretch;
     grid-template-areas:
@@ -16,36 +18,40 @@ body {
       "generator recipe";
   }
   
-  .recipe { grid-area: recipe; }
+  .recipe { grid-area: recipe;
+ }
   
-  .title { grid-area: title; }
-  
-  .generator { grid-area: generator; }
-  
-  .ingredient {  display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-    justify-content: stretch;
-    align-content: end;
-    grid-template-areas:
-      ". . ."
-      "ing1 ing2 ing3"
-      "ing4 ing5 ."
-      ". . .";
-    justify-self: stretch;
-    align-self: stretch;
-    grid-area: ingredient;
+  .title { grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3%; 
   }
   
-  .ing1 { grid-area: ing1; }
+  .generator { grid-area: generator;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
-  .ing2 { grid-area: ing2; }
-  
-  .ing3 { grid-area: ing3; }
-  
-  .ing4 { grid-area: ing4; }
-  
-  .ing5 { grid-area: ing5; }
+  .IngredientsRowDiv {  grid-area: Ingredients;  
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-around;    
+  }
+
+  .IngredientsRowDiv:last-child{
+    bottom: 5%;
+  }
+
+  .IngredientsRowDiv:nth-child(2){
+    bottom: 40%;
+  }
+
+  .IngredientsDiv{
+    border: 2px solid black;
+    background-color: rgb(175, 174, 171);
+  }
+ 
   

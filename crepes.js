@@ -1,9 +1,3 @@
-let farine = 63;
-let oeuf = 1;
-let lait = 0.2;
-let sucre = 0.5;
-let beurre = 13;
-
 let button = document.getElementById("generate");
 
 button.addEventListener("click", function (e) {
@@ -11,6 +5,11 @@ button.addEventListener("click", function (e) {
     if (nbInvites <= 0) {
         alert("Merci de renseigner un bon nombre d'invités")
     } else {
+        let farine = 63;
+        let oeuf = 1;
+        let lait = 0.2;
+        let sucre = 0.5;
+        let beurre = 13;
         let quantityflour = document.getElementById("qtyflour");
         let quantityeggs = document.getElementById("qtyeggs");
         let quantitymilk = document.getElementById("qtymilk");
@@ -21,7 +20,7 @@ button.addEventListener("click", function (e) {
         nbInvites.value = newValue;
         farine = farine * nbInvites;
         oeuf = oeuf * nbInvites;
-        lait = lait * nbInvites;
+        lait = Math.ceil(lait * nbInvites);
         sucre = sucre * nbInvites;
         beurre = beurre * nbInvites;
 
@@ -42,9 +41,6 @@ button.addEventListener("click", function (e) {
     }
 
 });
-console.log(button, nbInvites.value);
-
-
-let lotOeuf = 12;
-let achatOeuf = Math.ceil(oeuf / lotOeuf);
-console.log("Il faut acheter " + achatOeuf + " pack de " + lotOeuf + " oeufs");
+// let lotOeuf = 12;
+// let achatOeuf = Math.ceil(oeuf / lotOeuf);
+// console.log("Il faut acheter " + achatOeuf + " pack de " + lotOeuf + " oeufs");

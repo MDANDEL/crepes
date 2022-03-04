@@ -12,35 +12,50 @@
     <div class="container">
         <div class="title">
             <h1>
-                Crepe Party Generator
+                Crêpes Party Generator
             </h1>
         </div>
         <div class="generator">
-            <span- id="guest">Nombre d'invités</span>
-                <input id="number-guest" type="number" value="1" />
-                <button id="generate" onclick="">
-                    Générer
-                </button>
+            <div id="guest">Sélectionner le nombre d'invités</div>
+            <input id="number-guest" type="number" value="1" />
+            <button id="generate">
+                Générer
+            </button>
         </div>
-        <div class="ingredient-list">
-            <h1>Liste des Ingrédients</h1>
-            <div class="ing1">
-                
+        <div class="Label">
+            <h1 class="Label">Ingrédients</h1>
+            <div class="IngredientsRowDiv">
+                <div class="IngredientsDiv" id="flour"> 
+                    <span>Farine = </span>
+                    <span id="qtyflour">0</span>
+                    <span>g</span>
+                </div>
+                <div class="IngredientsDiv" id="egg"> 
+                    <span>Oeufs = </span>
+                    <span id="qtyeggs">0</span>
+                    <span></span>
+                </div>
+                <div class="IngredientsDiv" id="milk"> 
+                    <span>Lait = </span>
+                    <span id="qtymilk">0</span>
+                    <span>L</span>
+                </div>
             </div>
-            <div class="ing2">
-                
-            </div>
-            <div class="ing3">
-
-            </div>
-            <div class="ing4">
-
-            </div>
-            <div class="ing5">
-
+            <div class="IngredientsRowDiv">
+                <div class="IngredientsDiv" id="sugar"> 
+                    <span>Sucre = </span>
+                    <span id="qtysugar">0</span>
+                    <span> c. a. s</span>
+                </div>
+                <div class="IngredientsDiv" id="butter"> 
+                    <span>Beurre = </span>
+                    <span id="qtybutter">0</span>
+                    <span>g</span>
+                </div>
             </div>
         </div>
         <div class="recipe">
+            <h2>Recette</h2>
             <ol>
                 <li>Mettez la farine dans un saladier avec le sel et le sucre.</li>
                 <li>Faites un puits au milieu et versez-y les œufs.</li>
