@@ -20,13 +20,13 @@ button.addEventListener("click", function (e) {
         nbInvites.value = newValue;
         farine = farine * nbInvites;
         oeuf = oeuf * nbInvites;
-        lait = Math.ceil(lait * nbInvites);
+        lait = lait * nbInvites;
         sucre = sucre * nbInvites;
         beurre = beurre * nbInvites;
 
         quantityflour.innerText = farine;
         quantityeggs.innerText = oeuf;
-        quantitymilk.innerText = lait;
+        quantitymilk.innerText = lait.toFixed(2);
         quantitysugar.innerText = sucre;
         quantitybutter.innerText = beurre;
 
@@ -41,6 +41,3 @@ button.addEventListener("click", function (e) {
     }
 
 });
-// let lotOeuf = 12;
-// let achatOeuf = Math.ceil(oeuf / lotOeuf);
-// console.log("Il faut acheter " + achatOeuf + " pack de " + lotOeuf + " oeufs");
